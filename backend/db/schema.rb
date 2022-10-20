@@ -17,15 +17,18 @@ ActiveRecord::Schema.define(version: 2022_10_20_011137) do
   enable_extension "plpgsql"
 
   create_table "transactions", id: :uuid, default: -> { "gen_random_uuid()" }, force: :cascade do |t|
-    t.datetime "date"
     t.string "title"
     t.decimal "amount"
     t.string "gen_ledger_account"
     t.uuid "user_id"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
   end
 
   create_table "users", id: :uuid, default: -> { "gen_random_uuid()" }, force: :cascade do |t|
     t.string "name"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
   end
 
 end
