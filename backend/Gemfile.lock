@@ -66,6 +66,15 @@ GEM
     ffi (1.15.5)
     globalid (1.0.0)
       activesupport (>= 5.0)
+    haml (6.0.7)
+      temple (>= 0.8.2)
+      thor
+      tilt
+    haml-rails (2.1.0)
+      actionpack (>= 5.1)
+      activesupport (>= 5.1)
+      haml (>= 4.0.6)
+      railties (>= 5.1)
     i18n (1.12.0)
       concurrent-ruby (~> 1.0)
     listen (3.7.1)
@@ -134,8 +143,10 @@ GEM
       actionpack (>= 5.2)
       activesupport (>= 5.2)
       sprockets (>= 3.0.0)
+    temple (0.8.2)
     thor (1.2.1)
     thread_safe (0.3.6)
+    tilt (2.0.11)
     tzinfo (1.2.10)
       thread_safe (~> 0.1)
     websocket-driver (0.7.5)
@@ -149,6 +160,7 @@ PLATFORMS
 DEPENDENCIES
   bootsnap (>= 1.4.2)
   byebug
+  haml-rails (~> 2.0)
   listen (~> 3.2)
   pg (>= 0.18, < 2.0)
   puma (~> 4.1)
@@ -156,7 +168,6 @@ DEPENDENCIES
   rails (~> 6.0.6)
   spring
   spring-watcher-listen (~> 2.0.0)
-  tzinfo-data
 
 RUBY VERSION
    ruby 2.6.1p33
