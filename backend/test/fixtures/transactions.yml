@@ -1,0 +1,17 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  id: MyString
+  date: 2022-10-19 15:46:43
+  title: MyString
+  amount: 9.99
+  gen_ledger_account: MyString
+  user_id: MyString
+
+two:
+  id: MyString
+  date: 2022-10-19 15:46:43
+  title: MyString
+  amount: 9.99
+  gen_ledger_account: MyString
+  user_id: MyString
