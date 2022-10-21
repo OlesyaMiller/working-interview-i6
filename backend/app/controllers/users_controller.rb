@@ -12,4 +12,13 @@ class UsersController < ApplicationController
         render json: { message: user.errors }, status: 400
     end
   end
+
+  private
+
+  def user_params 
+    params.require(:user).permit(
+        :name
+    )
+  end
+
 end

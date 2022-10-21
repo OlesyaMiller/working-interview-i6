@@ -20,7 +20,9 @@ class TransactionsController < ApplicationController
         :amount, 
         :gen_ledger_account
     )
-end
+  end
+
+  private
 
   def find_transaction
     @transaction = Transaction.find_by(id: params[:id])
