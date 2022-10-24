@@ -1274,3 +1274,541 @@ Completed 200 OK in 5ms (Views: 3.6ms | ActiveRecord: 1.6ms | Allocations: 1423)
 Completed 200 OK in 8ms (Views: 5.7ms | ActiveRecord: 1.8ms | Allocations: 2462)
 
 
+Started GET "/users/index" for ::1 at 2022-10-23 22:43:54 -0400
+Started GET "/transactions/index" for ::1 at 2022-10-23 22:43:54 -0400
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#index as HTML
+  [1m[35m (18.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by TransactionsController#index as HTML
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:5:in `index'
+  [1m[36mTransaction Load (0.5ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions"[0m
+  ↳ app/controllers/transactions_controller.rb:4:in `index'
+Completed 200 OK in 12ms (Views: 6.1ms | ActiveRecord: 4.7ms | Allocations: 8800)
+
+
+Completed 200 OK in 20ms (Views: 12.9ms | ActiveRecord: 5.7ms | Allocations: 10669)
+
+
+Started GET "/users/index" for ::1 at 2022-10-23 22:43:54 -0400
+Processing by UsersController#index as HTML
+Started GET "/transactions/index" for ::1 at 2022-10-23 22:43:54 -0400
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Processing by TransactionsController#index as HTML
+  ↳ app/controllers/users_controller.rb:5:in `index'
+Completed 200 OK in 5ms (Views: 4.7ms | ActiveRecord: 0.5ms | Allocations: 1789)
+
+
+  [1m[36mTransaction Load (2.3ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions"[0m
+  ↳ app/controllers/transactions_controller.rb:4:in `index'
+Completed 200 OK in 5ms (Views: 2.4ms | ActiveRecord: 2.3ms | Allocations: 1826)
+
+
+Started GET "/users/index" for ::1 at 2022-10-23 22:48:24 -0400
+Started GET "/transactions/index" for ::1 at 2022-10-23 22:48:24 -0400
+Processing by UsersController#index as HTML
+Processing by TransactionsController#index as HTML
+  [1m[36mUser Load (2.7ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:5:in `index'
+  [1m[36mTransaction Load (3.2ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions"[0m
+Completed 200 OK in 11ms (Views: 8.5ms | ActiveRecord: 2.7ms | Allocations: 1798)
+
+
+  ↳ app/controllers/transactions_controller.rb:4:in `index'
+Completed 200 OK in 13ms (Views: 9.6ms | ActiveRecord: 3.2ms | Allocations: 2448)
+
+
+Started GET "/users/index" for ::1 at 2022-10-23 22:48:24 -0400
+Processing by UsersController#index as HTML
+Started GET "/transactions/index" for ::1 at 2022-10-23 22:48:24 -0400
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:5:in `index'
+Completed 200 OK in 7ms (Views: 6.0ms | ActiveRecord: 0.3ms | Allocations: 1479)
+
+
+Processing by TransactionsController#index as HTML
+  [1m[36mTransaction Load (0.5ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions"[0m
+  ↳ app/controllers/transactions_controller.rb:4:in `index'
+Completed 200 OK in 6ms (Views: 3.8ms | ActiveRecord: 0.5ms | Allocations: 978)
+
+
+Started GET "/ws" for ::1 at 2022-10-24 01:14:44 -0400
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActionController::RoutingError (No route matches [GET] "/ws"):
+  
+actionpack (6.0.6) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.6) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.6) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.6) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.6) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.6) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.6) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.6) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.6) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.6) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.4) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.6) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.6) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.6) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.4) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.6) lib/action_dispatch/middleware/host_authorization.rb:103:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.0.6) lib/rails/engine.rb:527:in `call'
+puma (4.3.12) lib/puma/configuration.rb:228:in `call'
+puma (4.3.12) lib/puma/server.rb:727:in `handle_request'
+puma (4.3.12) lib/puma/server.rb:476:in `process_client'
+puma (4.3.12) lib/puma/server.rb:332:in `block in run'
+puma (4.3.12) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/ws" for ::1 at 2022-10-24 01:14:53 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/ws"):
+  
+actionpack (6.0.6) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.6) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.6) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.6) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.6) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.6) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.6) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.6) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.6) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.6) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.4) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.6) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.6) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.6) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.4) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.6) lib/action_dispatch/middleware/host_authorization.rb:103:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.0.6) lib/rails/engine.rb:527:in `call'
+puma (4.3.12) lib/puma/configuration.rb:228:in `call'
+puma (4.3.12) lib/puma/server.rb:727:in `handle_request'
+puma (4.3.12) lib/puma/server.rb:476:in `process_client'
+puma (4.3.12) lib/puma/server.rb:332:in `block in run'
+puma (4.3.12) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/ws" for ::1 at 2022-10-24 01:15:10 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/ws"):
+  
+actionpack (6.0.6) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.6) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.6) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.6) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.6) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.6) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.6) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.6) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.6) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.6) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.4) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.6) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.6) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.6) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.4) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.6) lib/action_dispatch/middleware/host_authorization.rb:103:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.0.6) lib/rails/engine.rb:527:in `call'
+puma (4.3.12) lib/puma/configuration.rb:228:in `call'
+puma (4.3.12) lib/puma/server.rb:727:in `handle_request'
+puma (4.3.12) lib/puma/server.rb:476:in `process_client'
+puma (4.3.12) lib/puma/server.rb:332:in `block in run'
+puma (4.3.12) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/ws" for ::1 at 2022-10-24 01:15:43 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/ws"):
+  
+actionpack (6.0.6) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.6) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.6) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.6) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.6) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.6) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.6) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.6) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.6) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.6) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.4) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.6) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.6) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.6) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.4) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.6) lib/action_dispatch/middleware/host_authorization.rb:103:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.0.6) lib/rails/engine.rb:527:in `call'
+puma (4.3.12) lib/puma/configuration.rb:228:in `call'
+puma (4.3.12) lib/puma/server.rb:727:in `handle_request'
+puma (4.3.12) lib/puma/server.rb:476:in `process_client'
+puma (4.3.12) lib/puma/server.rb:332:in `block in run'
+puma (4.3.12) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/ws" for ::1 at 2022-10-24 01:16:48 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/ws"):
+  
+actionpack (6.0.6) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.6) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.6) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.6) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.6) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.6) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.6) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.6) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.6) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.6) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.4) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.6) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.6) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.6) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.4) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.6) lib/action_dispatch/middleware/host_authorization.rb:103:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.0.6) lib/rails/engine.rb:527:in `call'
+puma (4.3.12) lib/puma/configuration.rb:228:in `call'
+puma (4.3.12) lib/puma/server.rb:727:in `handle_request'
+puma (4.3.12) lib/puma/server.rb:476:in `process_client'
+puma (4.3.12) lib/puma/server.rb:332:in `block in run'
+puma (4.3.12) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/ws" for ::1 at 2022-10-24 01:18:57 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/ws"):
+  
+actionpack (6.0.6) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.6) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.6) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.6) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.6) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.6) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.6) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.6) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.6) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.6) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.4) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.6) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.6) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.6) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.4) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.6) lib/action_dispatch/middleware/host_authorization.rb:103:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.0.6) lib/rails/engine.rb:527:in `call'
+puma (4.3.12) lib/puma/configuration.rb:228:in `call'
+puma (4.3.12) lib/puma/server.rb:727:in `handle_request'
+puma (4.3.12) lib/puma/server.rb:476:in `process_client'
+puma (4.3.12) lib/puma/server.rb:332:in `block in run'
+puma (4.3.12) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/ws" for ::1 at 2022-10-24 01:23:14 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/ws"):
+  
+actionpack (6.0.6) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.6) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.6) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.6) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.6) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.6) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.6) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.6) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.6) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.6) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.4) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.6) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.6) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.6) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.4) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.6) lib/action_dispatch/middleware/host_authorization.rb:103:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.0.6) lib/rails/engine.rb:527:in `call'
+puma (4.3.12) lib/puma/configuration.rb:228:in `call'
+puma (4.3.12) lib/puma/server.rb:727:in `handle_request'
+puma (4.3.12) lib/puma/server.rb:476:in `process_client'
+puma (4.3.12) lib/puma/server.rb:332:in `block in run'
+puma (4.3.12) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/ws" for ::1 at 2022-10-24 01:31:47 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/ws"):
+  
+actionpack (6.0.6) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.6) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.6) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.6) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.6) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.6) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.6) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.6) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.6) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.6) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.4) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.6) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.6) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.6) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.4) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.6) lib/action_dispatch/middleware/host_authorization.rb:103:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.0.6) lib/rails/engine.rb:527:in `call'
+puma (4.3.12) lib/puma/configuration.rb:228:in `call'
+puma (4.3.12) lib/puma/server.rb:727:in `handle_request'
+puma (4.3.12) lib/puma/server.rb:476:in `process_client'
+puma (4.3.12) lib/puma/server.rb:332:in `block in run'
+puma (4.3.12) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/transactions/index" for ::1 at 2022-10-24 01:50:08 -0400
+Started GET "/users/index" for ::1 at 2022-10-24 01:50:08 -0400
+Processing by TransactionsController#index as HTML
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:5:in `index'
+  [1m[36mTransaction Load (6.9ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions"[0m
+  ↳ app/controllers/transactions_controller.rb:4:in `index'
+Completed 200 OK in 12ms (Views: 5.2ms | ActiveRecord: 5.0ms | Allocations: 6522)
+
+
+Completed 200 OK in 22ms (Views: 6.2ms | ActiveRecord: 13.9ms | Allocations: 12675)
+
+
+Started GET "/users/index" for ::1 at 2022-10-24 01:50:08 -0400
+Started GET "/transactions/index" for ::1 at 2022-10-24 01:50:08 -0400
+Processing by UsersController#index as HTML
+Processing by TransactionsController#index as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mTransaction Load (0.5ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions"[0m
+  ↳ app/controllers/transactions_controller.rb:4:in `index'
+  ↳ app/controllers/users_controller.rb:5:in `index'
+Completed 200 OK in 3ms (Views: 2.2ms | ActiveRecord: 0.5ms | Allocations: 1631)
+
+
+Completed 200 OK in 4ms (Views: 3.4ms | ActiveRecord: 0.8ms | Allocations: 2359)
+
+
+Started GET "/transactions/index" for ::1 at 2022-10-24 02:31:21 -0400
+Started GET "/users/index" for ::1 at 2022-10-24 02:31:21 -0400
+Processing by TransactionsController#index as HTML
+Processing by UsersController#index as HTML
+  [1m[36mTransaction Load (0.7ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions"[0m
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/transactions_controller.rb:4:in `index'
+  ↳ app/controllers/users_controller.rb:5:in `index'
+Completed 200 OK in 3ms (Views: 1.6ms | ActiveRecord: 0.7ms | Allocations: 1825)
+
+
+Completed 200 OK in 3ms (Views: 2.1ms | ActiveRecord: 0.5ms | Allocations: 2413)
+
+
+Started GET "/transactions/index" for ::1 at 2022-10-24 02:31:21 -0400
+Started GET "/users/index" for ::1 at 2022-10-24 02:31:21 -0400
+Processing by TransactionsController#index as HTML
+Processing by UsersController#index as HTML
+  [1m[36mTransaction Load (0.4ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions"[0m
+  ↳ app/controllers/transactions_controller.rb:4:in `index'
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Completed 200 OK in 2ms (Views: 1.2ms | ActiveRecord: 0.4ms | Allocations: 1120)
+
+
+  ↳ app/controllers/users_controller.rb:5:in `index'
+Completed 200 OK in 3ms (Views: 2.4ms | ActiveRecord: 0.6ms | Allocations: 2479)
+
+
+Started GET "/users/index" for ::1 at 2022-10-24 02:37:32 -0400
+Started GET "/transactions/index" for ::1 at 2022-10-24 02:37:32 -0400
+Processing by UsersController#index as HTML
+Processing by TransactionsController#index as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:5:in `index'
+  [1m[36mTransaction Load (0.5ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions"[0m
+Completed 200 OK in 3ms (Views: 2.1ms | ActiveRecord: 0.8ms | Allocations: 1874)
+
+
+  ↳ app/controllers/transactions_controller.rb:4:in `index'
+Completed 200 OK in 3ms (Views: 2.5ms | ActiveRecord: 0.5ms | Allocations: 2572)
+
+
+Started GET "/users/index" for ::1 at 2022-10-24 02:37:32 -0400
+Started GET "/transactions/index" for ::1 at 2022-10-24 02:37:32 -0400
+Processing by UsersController#index as HTML
+Processing by TransactionsController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:5:in `index'
+  [1m[36mTransaction Load (0.5ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions"[0m
+Completed 200 OK in 2ms (Views: 1.5ms | ActiveRecord: 0.4ms | Allocations: 1476)
+
+
+  ↳ app/controllers/transactions_controller.rb:4:in `index'
+Completed 200 OK in 3ms (Views: 2.3ms | ActiveRecord: 0.5ms | Allocations: 2479)
+
+
+Started GET "/users/index" for ::1 at 2022-10-24 02:42:09 -0400
+Started GET "/transactions/index" for ::1 at 2022-10-24 02:42:09 -0400
+Processing by TransactionsController#index as HTML
+Processing by UsersController#index as HTML
+  [1m[36mTransaction Load (0.5ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions"[0m
+  ↳ app/controllers/transactions_controller.rb:4:in `index'
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Completed 200 OK in 2ms (Views: 1.1ms | ActiveRecord: 0.5ms | Allocations: 1100)
+
+
+  ↳ app/controllers/users_controller.rb:5:in `index'
+Completed 200 OK in 3ms (Views: 1.9ms | ActiveRecord: 0.5ms | Allocations: 2459)
+
+
+Started GET "/transactions/index" for ::1 at 2022-10-24 02:42:09 -0400
+Started GET "/users/index" for ::1 at 2022-10-24 02:42:09 -0400
+Processing by TransactionsController#index as HTML
+Processing by UsersController#index as HTML
+  [1m[36mTransaction Load (0.4ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions"[0m
+  ↳ app/controllers/transactions_controller.rb:4:in `index'
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Completed 200 OK in 2ms (Views: 1.5ms | ActiveRecord: 0.4ms | Allocations: 1394)
+
+
+  ↳ app/controllers/users_controller.rb:5:in `index'
+Completed 200 OK in 3ms (Views: 2.5ms | ActiveRecord: 0.5ms | Allocations: 2442)
+
+
+Started GET "/users/index" for ::1 at 2022-10-24 02:53:07 -0400
+Started GET "/transactions/index" for ::1 at 2022-10-24 02:53:07 -0400
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:5:in `index'
+Completed 200 OK in 2ms (Views: 1.1ms | ActiveRecord: 0.5ms | Allocations: 2552)
+
+
+Processing by TransactionsController#index as HTML
+  [1m[36mTransaction Load (0.4ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions"[0m
+Started GET "/users/index" for ::1 at 2022-10-24 02:53:07 -0400
+  ↳ app/controllers/transactions_controller.rb:4:in `index'
+Completed 200 OK in 2ms (Views: 1.6ms | ActiveRecord: 0.4ms | Allocations: 1361)
+
+
+Processing by UsersController#index as HTML
+Started GET "/transactions/index" for ::1 at 2022-10-24 02:53:07 -0400
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:5:in `index'
+Completed 200 OK in 2ms (Views: 1.1ms | ActiveRecord: 0.6ms | Allocations: 1661)
+
+
+Processing by TransactionsController#index as HTML
+  [1m[36mTransaction Load (0.3ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions"[0m
+  ↳ app/controllers/transactions_controller.rb:4:in `index'
+Completed 200 OK in 2ms (Views: 1.8ms | ActiveRecord: 0.3ms | Allocations: 978)
+
+
+Started GET "/users/index" for ::1 at 2022-10-24 02:53:13 -0400
+Processing by UsersController#index as HTML
+Started GET "/transactions/index" for ::1 at 2022-10-24 02:53:13 -0400
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:5:in `index'
+Completed 200 OK in 3ms (Views: 1.8ms | ActiveRecord: 0.5ms | Allocations: 1532)
+
+
+Processing by TransactionsController#index as HTML
+  [1m[36mTransaction Load (0.5ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions"[0m
+  ↳ app/controllers/transactions_controller.rb:4:in `index'
+Completed 200 OK in 2ms (Views: 1.3ms | ActiveRecord: 0.5ms | Allocations: 1037)
+
+
+Started GET "/users/index" for ::1 at 2022-10-24 02:53:13 -0400
+Processing by UsersController#index as HTML
+Started GET "/transactions/index" for ::1 at 2022-10-24 02:53:13 -0400
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:5:in `index'
+Processing by TransactionsController#index as HTML
+Completed 200 OK in 2ms (Views: 1.7ms | ActiveRecord: 0.2ms | Allocations: 1680)
+
+
+  [1m[36mTransaction Load (0.4ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions"[0m
+  ↳ app/controllers/transactions_controller.rb:4:in `index'
+Completed 200 OK in 2ms (Views: 1.0ms | ActiveRecord: 0.4ms | Allocations: 1166)
+
+
+Started GET "/transactions/index" for ::1 at 2022-10-24 02:55:35 -0400
+Started GET "/users/index" for ::1 at 2022-10-24 02:55:35 -0400
+Processing by TransactionsController#index as HTML
+Processing by UsersController#index as HTML
+  [1m[36mTransaction Load (0.5ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions"[0m
+  ↳ app/controllers/transactions_controller.rb:4:in `index'
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Completed 200 OK in 2ms (Views: 1.1ms | ActiveRecord: 0.5ms | Allocations: 1100)
+
+
+  ↳ app/controllers/users_controller.rb:5:in `index'
+Completed 200 OK in 3ms (Views: 2.3ms | ActiveRecord: 0.5ms | Allocations: 2459)
+
+
+Started GET "/transactions/index" for ::1 at 2022-10-24 02:55:35 -0400
+Processing by TransactionsController#index as HTML
+Started GET "/users/index" for ::1 at 2022-10-24 02:55:35 -0400
+  [1m[36mTransaction Load (0.3ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions"[0m
+  ↳ app/controllers/transactions_controller.rb:4:in `index'
+Completed 200 OK in 2ms (Views: 1.1ms | ActiveRecord: 0.3ms | Allocations: 1155)
+
+
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:5:in `index'
+Completed 200 OK in 2ms (Views: 1.4ms | ActiveRecord: 0.3ms | Allocations: 1354)
+
+
+Started GET "/" for ::1 at 2022-10-24 03:10:43 -0400
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/olesya/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/railties-6.0.6/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/olesya/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/railties-6.0.6/lib/rails/templates/rails/welcome/index.html.erb (Duration: 8.0ms | Allocations: 318)
+Completed 200 OK in 16ms (Views: 9.6ms | ActiveRecord: 0.0ms | Allocations: 2504)
+
+
+Started GET "/users/index" for ::1 at 2022-10-24 03:10:53 -0400
+  
+AbstractController::ActionNotFound (The action 'show' could not be found for UsersController):
+  
+actionpack (6.0.6) lib/abstract_controller/base.rb:131:in `process'
+actionpack (6.0.6) lib/action_controller/metal.rb:190:in `dispatch'
+actionpack (6.0.6) lib/action_controller/metal.rb:254:in `dispatch'
+actionpack (6.0.6) lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+actionpack (6.0.6) lib/action_dispatch/routing/route_set.rb:33:in `serve'
+actionpack (6.0.6) lib/action_dispatch/journey/router.rb:49:in `block in serve'
+actionpack (6.0.6) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.0.6) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.0.6) lib/action_dispatch/routing/route_set.rb:834:in `call'
+rack (2.2.4) lib/rack/etag.rb:27:in `call'
+rack (2.2.4) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.4) lib/rack/head.rb:12:in `call'
+activerecord (6.0.6) lib/active_record/migration.rb:567:in `call'
+actionpack (6.0.6) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.0.6) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (6.0.6) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.0.6) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.6) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (6.0.6) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+actionpack (6.0.6) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.6) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.6) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.6) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.6) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.6) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.6) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.6) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.6) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.4) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.6) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.6) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.6) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.4) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.6) lib/action_dispatch/middleware/host_authorization.rb:103:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.0.6) lib/rails/engine.rb:527:in `call'
+puma (4.3.12) lib/puma/configuration.rb:228:in `call'
+puma (4.3.12) lib/puma/server.rb:727:in `handle_request'
+puma (4.3.12) lib/puma/server.rb:476:in `process_client'
+puma (4.3.12) lib/puma/server.rb:332:in `block in run'
+puma (4.3.12) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/users/" for ::1 at 2022-10-24 03:10:58 -0400
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:5:in `index'
+Completed 200 OK in 9ms (Views: 4.2ms | ActiveRecord: 2.6ms | Allocations: 5526)
+
+
+Started GET "/transactions/" for ::1 at 2022-10-24 03:11:07 -0400
+Processing by TransactionsController#index as HTML
+  [1m[36mTransaction Load (0.4ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions"[0m
+  ↳ app/controllers/transactions_controller.rb:4:in `index'
+Completed 200 OK in 10ms (Views: 5.1ms | ActiveRecord: 2.0ms | Allocations: 6429)
+
+
