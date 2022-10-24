@@ -1,8 +1,13 @@
 import React from 'react';
+import Transaction from './Transaction';
 
-function Transcations() {
+const Transcations = (props) => {
     return ( 
-        <p>transactionS</p>
+        <p>transactionS
+            <div>
+                {props.transactions.map(transaction => {return <div key={transaction.id}>{<Transaction transaction={transaction} key={transaction.id} id={transaction.id} />}</div>})}
+        </div>
+        </p>
      );
 }
 

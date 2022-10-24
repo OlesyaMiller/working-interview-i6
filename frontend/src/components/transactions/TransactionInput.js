@@ -1,8 +1,21 @@
-import React from 'react';
+import React, { useState } from 'react';
 
-function TransactionInput() {
+const TransactionInput = () => {
+    const [transactionInfo, setTransactionInfo] = useState({
+        user_id: "",
+        title: "",
+        amount: 0,
+        gen_ledger_account: "",
+    });
+
+    const handleOnChange = (event) => {
+        setTransactionInfo({
+            [event.target.name]: event.target.value 
+        })
+    }
+
     return (  
-        <p>transaction input</p>
+        <p>transactions form</p>
     );
 }
 

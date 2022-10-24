@@ -1,8 +1,22 @@
-import React from 'react';
+import React, { useState } from 'react';
 
-function UserInput() {
+
+const UserInput = () => {
+    const [userInfo, setUserInfo] = useState({
+        name: ""
+    });
+
+    const handleOnChange = (event) => {
+        setUserInfo({
+            [event.target.name]: event.target.value 
+        })
+    }
+
     return ( 
-        <p>user input</p>
+        <p>
+            this is a users form
+        </p>
+        
      );
 }
 

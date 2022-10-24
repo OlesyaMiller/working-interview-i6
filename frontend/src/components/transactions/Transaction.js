@@ -1,8 +1,10 @@
 import React from 'react';
 
-function Transaction() {
+const Transaction = (props) => {
     return (  
-        <p>transaction</p>
+        <div><h5>Transaction</h5>
+            <p>{props.transaction.title}</p>
+        </div>
     );
 }
 
