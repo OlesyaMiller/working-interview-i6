@@ -1,10 +1,9 @@
-import React from 'react';
+import { React, useState, useEffect } from 'react';
 import Users from './Users';
-import { useState, useEffect } from 'react';
 import axios from 'axios';
 
-const UsersContainer = (props) => {
-    const [users, setUsers] = useState([])
+const UsersContainer = () => {
+    const [users, setUsers] = useState([]);
 
     useEffect(() => {
         const fetchData = async () => {
@@ -12,7 +11,7 @@ const UsersContainer = (props) => {
             console.log("users data", data.data)
             setUsers(data.data);
         }
-        fetchData()
+        fetchData();
     }, []);
 
     return (  
