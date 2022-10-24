@@ -8,6 +8,7 @@ const App = () => {
     <div>
         <p>
           Welcome to my accounting app!
+          <button>Create new user</button>
           <UsersContainer />
           <TransactionsContainer />
         </p>
