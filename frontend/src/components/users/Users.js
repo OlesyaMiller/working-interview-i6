@@ -1,8 +1,11 @@
 import React from 'react';
+import User from './User';
 
-function Users() {
+const Users = (props) => {
     return ( 
-        <p>userS</p>
+        <div>USERS
+                {props.users.map(user => {return <div key={user.id}>{<User user={user} key={user.id} id={user.id} />}</div>})}
+        </div>
      );
 }
 

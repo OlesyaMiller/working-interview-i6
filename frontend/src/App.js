@@ -1,28 +1,25 @@
-import UsersContainer from './components/users/UsersConatainer';
 import React from 'react';
-import { useState, useEffect } from 'react';
-import axios from 'axios';
+import UsersContainer from './components/users/UsersConatainer';
+import TransactionsContainer from './components/transactions/TransactionsContainer';
+import NavBar from './components/nav/NavBar';
+import UserInput from './components/users/UserInput';
+import TransactionInput from './components/transactions/TransactionInput';
+import { Route, Routes } from 'react-router-dom';
 
-function App() {
-  const [users, setUsers] = useState("")
-
-  useEffect(() => {
-    const fetchData = async () => {
-      const data = await axios('http://localhost:3000/users/index');
-      console.log(data)
-      setUsers(data.data);
-    }
-    fetchData()
-  }, []);
+const App = () => {
 
   return (
     <div>
-        <p>
-          Welcome to my accounting app!
-          <UsersContainer users={users}/>
-        </p>
+        <NavBar />
+        <Routes>
+          <Route exact path="/new-user" element={<UserInput/>} />
+          <Route path="/new-transaction" element={<TransactionInput/>} />
+        </Routes>
+      
+        <TransactionsContainer />
+      
     </div>
-  );
+  )
 }
 
 export default App;
