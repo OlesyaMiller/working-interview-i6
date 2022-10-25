@@ -16,9 +16,7 @@ const UsersContainer = () => {
 
     return (  
         <div>
-            <div>This is Users UsersContainer</div>
             <Users users={users}/>
-
         </div>
     );
 }

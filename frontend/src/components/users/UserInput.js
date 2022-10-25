@@ -18,6 +18,7 @@ const UserInput = () => {
 
     const handleOnChange = (event) => {
         setUserInfo({
+            ...userInfo,
             [event.target.name]: event.target.value 
         })
     }
@@ -29,9 +30,9 @@ const UserInput = () => {
 
     return ( 
         <div>
-            <form method="post" onChange={handleOnChange} onSubmit={handleOnSubmit}>
+            <form method="post" onSubmit={handleOnSubmit}>
                 <label>Name:</label>
-                <input onChange={handleOnChange} />
+                <input name="name" onChange={handleOnChange} value={userInfo.name}/>
                 <input type="submit" value="Submit" />
             </form>
         </div>

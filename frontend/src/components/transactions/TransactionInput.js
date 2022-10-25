@@ -46,7 +46,7 @@ const TransactionInput = () => {
         <div>
             <form method="post" onSubmit={handleOnSubmit}>
                 <select name="user_id" onChange={handleOnChange}>
-                    <option name="user_id" value="select">Select</option>  
+                    <option value="select">Select</option>  
                     {users.map(user => 
                         {return <option name="user_id" value={user.id}>{user.name}</option>}
                     )}
