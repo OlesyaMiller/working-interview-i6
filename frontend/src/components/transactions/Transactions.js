@@ -1,10 +1,9 @@
 import React from 'react';
-import Transaction from './Transaction';
 
 const Transcations = ({transactions}) => {
     
   return (
-    <table className='table table-bordered'>
+    <table border='1px solid black'>
       <thead>
         <tr>
             <td>Date</td>
@@ -14,7 +13,7 @@ const Transcations = ({transactions}) => {
         </tr>
       </thead>
       <tbody>
-        {transactions.map(transaction => <tr>
+        {transactions.map(transaction => <tr key={transaction.id}>
             <td>{transaction.created_at}</td>
             <td>{transaction.title}</td>
             <td>{transaction.amount}</td>

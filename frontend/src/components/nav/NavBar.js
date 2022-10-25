@@ -5,8 +5,16 @@ const NavBar = () => {
   return (
     <div className="navbar">
         <Link
+          to="/"
+            // exact
+            activestyle={{
+              color: 'black'
+            }}
+            >Home
+        </Link> |
+        <Link
             to="/new-user"
-            exact
+            // exact
             activestyle={{
                 color: 'black'
             }}
@@ -15,7 +23,7 @@ const NavBar = () => {
 
         <Link
           to="/new-transaction"
-          exact 
+          // exact 
           activestyle={{
             color: 'black'
           }}

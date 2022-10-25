@@ -1,7 +1,10 @@
 import React, { useState } from 'react';
 import axios from 'axios';
+import { useNavigate } from 'react-router-dom';
 
 const UserInput = () => {
+    const navigate = useNavigate();
+    
     const [userInfo, setUserInfo] = useState({
         name: ""
     });
@@ -25,7 +28,8 @@ const UserInput = () => {
 
     const handleOnSubmit = (event) => {
         event.preventDefault();
-        createUser(userInfo)
+        createUser(userInfo);
+        navigate('/');
     }
 
     return ( 
