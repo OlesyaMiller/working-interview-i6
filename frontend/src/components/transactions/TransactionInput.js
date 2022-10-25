@@ -51,7 +51,7 @@ const TransactionInput = () => {
                         {return <option name="user_id" value={user.id}>{user.name}</option>}
                     )}
                 </select>
-                <input onChange={handleOnChange} name="title" value={transactionInfo.title}/>
+                <input onChange={handleOnChange} type="text" name="title" value={transactionInfo.title}/>
                 <input onChange={handleOnChange} name="amount" value={transactionInfo.amount}/>
                 <input onChange={handleOnChange} name="gen_ledger_account" value={transactionInfo.gen_ledger_account}/>
                 <input type="submit" value="Submit" />
