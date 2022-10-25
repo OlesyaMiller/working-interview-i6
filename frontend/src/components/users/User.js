@@ -2,7 +2,7 @@ import React from 'react';
 
 const User = (props) => {
     return ( 
-        <h5>{props.user.name}</h5>
+        <div>{props.user.name}</div>
      );
 }
 

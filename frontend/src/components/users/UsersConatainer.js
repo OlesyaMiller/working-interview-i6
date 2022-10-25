@@ -7,7 +7,7 @@ const UsersContainer = () => {
 
     useEffect(() => {
         const fetchData = async () => {
-            const data = await axios('http://localhost:3000/users/index');
+            const data = await axios('http://localhost:3000/users');
             console.log("users data", data.data)
             setUsers(data.data);
         }
@@ -16,7 +16,7 @@ const UsersContainer = () => {
 
     return (  
         <div>
-            <p>This is Users UsersContainer</p>
+            <div>This is Users UsersContainer</div>
             <Users users={users}/>
 
         </div>

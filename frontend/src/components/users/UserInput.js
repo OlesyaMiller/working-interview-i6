@@ -6,20 +6,20 @@ const UserInput = () => {
         name: ""
     });
 
-    const handleOnChange = (event) => {
-        setUserInfo({
-            [event.target.name]: event.target.value 
-        })
-    }
-
     const [userId, setUserId] = useState("");
 
     const createUser = (data) => {
         axios.post('http://localhost:3000/users', data)
         .then(responce => setUserId(responce.data.id))
-        .catch(function (error) {
+        .catch(error => {
             console.log(error);
         });
+    }
+
+    const handleOnChange = (event) => {
+        setUserInfo({
+            [event.target.name]: event.target.value 
+        })
     }
 
     const handleOnSubmit = (event) => {
@@ -29,10 +29,9 @@ const UserInput = () => {
 
     return ( 
         <div>
-            <form onSubmit={handleOnSubmit}>
-                <label>Name:
-                    <input type="text" name="name" value={userInfo} onChange={handleOnChange} />
-                </label>
+            <form method="post" onChange={handleOnChange} onSubmit={handleOnSubmit}>
+                <label>Name:</label>
+                <input onChange={handleOnChange} />
                 <input type="submit" value="Submit" />
             </form>
         </div>
