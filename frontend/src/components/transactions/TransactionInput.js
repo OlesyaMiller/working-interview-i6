@@ -1,7 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
+import { useNavigate } from 'react-router-dom';
 
 const TransactionInput = () => {
+    const navigate = useNavigate();
+
     const [transactionInfo, setTransactionInfo] = useState({
         user_id: "",
         title: "",
@@ -40,6 +43,14 @@ const TransactionInput = () => {
     const handleOnSubmit = (event) => {
         event.preventDefault();
         createTransaction(transactionInfo)
+        setTransactionInfo({
+            ...transactionInfo,
+            user_id: "",
+            title: "",
+            amount: 0,
+            gen_ledger_account: "",
+        })
+        navigate('/');
     }
 
     return (  
@@ -48,7 +59,7 @@ const TransactionInput = () => {
                 <select name="user_id" onChange={handleOnChange}>
                     <option value="select">Select</option>  
                     {users.map(user => 
-                        {return <option name="user_id" value={user.id}>{user.name}</option>}
+                        {return <option key={user.id} name="user_id" value={user.id}>{user.name}</option>}
                     )}
                 </select>
                 <input onChange={handleOnChange} type="text" name="title" value={transactionInfo.title}/>

@@ -1,26 +1,34 @@
 import React from 'react';
-import { NavLink } from 'react-router-dom';
+import { NavLink, Link } from 'react-router-dom';
 
 const NavBar = () => {
   return (
     <div className="navbar">
-        <NavLink
+        <Link
+          to="/"
+            // exact
+            activestyle={{
+              color: 'black'
+            }}
+            >Home
+        </Link> |
+        <Link
             to="/new-user"
-            exact
-            activeStyle={{
+            // exact
+            activestyle={{
                 color: 'black'
             }}
             >Create user
-        </NavLink> |
+        </Link> |
 
-        <NavLink
+        <Link
           to="/new-transaction"
-          exact 
-          activeStyle={{
+          // exact 
+          activestyle={{
             color: 'black'
           }}
         > Create transaction
-        </NavLink> 
+        </Link> 
         
     </div>
   )
