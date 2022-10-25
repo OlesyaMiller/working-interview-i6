@@ -1,26 +1,26 @@
 import React from 'react';
-import { NavLink } from 'react-router-dom';
+import { NavLink, Link } from 'react-router-dom';
 
 const NavBar = () => {
   return (
     <div className="navbar">
-        <NavLink
+        <Link
             to="/new-user"
             exact
-            activeStyle={{
+            activestyle={{
                 color: 'black'
             }}
             >Create user
-        </NavLink> |
+        </Link> |
 
-        <NavLink
+        <Link
           to="/new-transaction"
           exact 
-          activeStyle={{
+          activestyle={{
             color: 'black'
           }}
         > Create transaction
-        </NavLink> 
+        </Link> 
         
     </div>
   )

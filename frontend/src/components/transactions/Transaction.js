@@ -2,9 +2,12 @@ import React from 'react';
 
 const Transaction = (props) => {
     return (  
-        <div>
-            {props.transaction.title}
-        </div>
+        <>
+            <td>{props.transaction.date_created}</td>
+            <td>{props.transaction.title}</td>
+            <td>{props.transaction.amount}</td>
+            <td>{props.transaction.user.name}</td>
+        </>
     );
 }
 
