@@ -1,24 +1,21 @@
-import { React, useState } from "react";
-import SlidingPane from "react-sliding-pane";
+import React from "react";
 import "react-sliding-pane/dist/react-sliding-pane.css";
 
 const Transaction = ({id, transactions}) => {
-    // console.log('transactions props', transactions)
-    // const [state, setState] = useState({
-    //     isPaneOpen: false
-    // }); 
     
     if (transactions.length === 0) return null;
 
     const transaction = transactions.find(transaction => transaction.id === id);
-    console.log('transaction', transaction)
-    
+
     return ( 
         <div>
-            <div>this is transaction title {transaction.title}</div>
-            
+            <div>Id: {transaction.id}</div>
+            <div>Title: {transaction.title}</div>
+            <div>Amount: {transaction.amount}</div>
+            <div>General ledger account: {transaction.gen_ledger_account}</div>
+            <div>User name: {transaction.user_id}</div>
         </div>
-     );
+     )
 }
 
 export default Transaction;
