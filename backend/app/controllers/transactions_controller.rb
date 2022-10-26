@@ -13,6 +13,8 @@ class TransactionsController < ApplicationController
     end
   end
 
+  private
+
   def transaction_params 
     params.require(:transaction).permit(
         :title, 
@@ -20,12 +22,6 @@ class TransactionsController < ApplicationController
         :amount, 
         :gen_ledger_account
     )
-  end
-
-  private
-
-  def find_transaction
-    @transaction = Transaction.find_by(id: params[:id])
   end
   
 end
