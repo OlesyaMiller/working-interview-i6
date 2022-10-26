@@ -9,28 +9,26 @@ const UserInput = () => {
         name: ""
     });
 
-    const [userId, setUserId] = useState("");
-
     const createUser = (data) => {
         axios.post('http://localhost:3000/users', data)
-        .then(responce => setUserId(responce.data.id))
+        .then(responce => responce.json())
         .catch(error => {
             console.log(error);
-        });
-    }
+        })
+    };
 
     const handleOnChange = (event) => {
         setUserInfo({
             ...userInfo,
             [event.target.name]: event.target.value 
         })
-    }
+    };
 
     const handleOnSubmit = (event) => {
         event.preventDefault();
         createUser(userInfo);
         navigate('/');
-    }
+    };
 
     return ( 
         <div>
@@ -40,8 +38,7 @@ const UserInput = () => {
                 <input type="submit" value="Submit" />
             </form>
         </div>
-        
-     );
+     )
 }
 
 export default UserInput;
