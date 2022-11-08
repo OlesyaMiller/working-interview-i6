@@ -24,14 +24,13 @@ const Transcations = ({transactions}) => {
         </thead>
         <tbody>
           {transactions.map(transaction => 
-            <Link key={transaction.id} onClick={() => {setId(transaction.id); setState({isPaneOpen: true})}}>
-              <tr>
+              <tr key={transaction.id} onClick={() => {setId(transaction.id); setState({isPaneOpen: true})}}>
                   <td>{transaction.created_at}</td> |
                   <td>{transaction.title}</td> |
                   <td>{transaction.amount}</td> |
                   <td>{transaction.user_id}</td>
               </tr>
-            </Link>)}
+            )}
         </tbody>
       </table>
 
