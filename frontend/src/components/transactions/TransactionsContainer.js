@@ -3,11 +3,13 @@ import Transcations from './Transactions';
 import axios from 'axios';
 
 const TransactionsContainer = () => {
+    const BASE_URL = 'http://localhost:3000'
+
     const [transactions, setTransactions] = useState([]);
 
     useEffect(() => {
         const fetchData = async () => {
-          const data = await axios('http://localhost:3000/transactions');
+          const data = await axios(`${BASE_URL}/transactions`);
           setTransactions(data.data);
         }
         fetchData()

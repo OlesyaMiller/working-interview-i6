@@ -1,5 +1,4 @@
 import { React, useState } from 'react';
-import { Link } from 'react-router-dom';
 import SlidingPane from "react-sliding-pane";
 import Transaction from './Transaction';
 import "react-sliding-pane/dist/react-sliding-pane.css";

@@ -3,6 +3,8 @@ import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 
 const TransactionInput = () => {
+    const BASE_URL = 'http://localhost:3000'
+
     const navigate = useNavigate();
 
     const [transactionInfo, setTransactionInfo] = useState({
@@ -16,14 +18,14 @@ const TransactionInput = () => {
 
     useEffect(() => {
         const fetchData = async () => {
-            const data = await axios('http://localhost:3000/users');
+            const data = await axios(`${BASE_URL}/users`);
             setUsers(data.data);
         }
         fetchData();
     }, []);
 
     const createTransaction = (data) => {
-        axios.post('http://localhost:3000/transactions', data)
+        axios.post(`${BASE_URL}/transactions`, data)
         .then(res => res.json())
         .catch(error => {
             console.log(error);
